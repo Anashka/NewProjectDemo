@@ -1,0 +1,16 @@
+<h2 class="page-title">{{ author.name }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="meta-list">
+      <li>id: {{ author.id }}</li>
+      <li>name: {{ author.name }}</li>
+      <li>biography: {{ author.biography }}</li>
+      <li>{{ author.dateofbirth }}</li>
+      <li>{{ author.email }}</li>
+      <li>{{ author.listofbooks }}</li>
+    </ul>
+  </div>
+</div>
+<button class="btn btn-primary btn-lg" (click)="ondelete(author.id)">
+  Delete author
+</button>

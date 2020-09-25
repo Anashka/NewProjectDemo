@@ -1,0 +1,102 @@
+<h1 class="page-name">Add New author</h1>
+
+<div class="container">
+  <div class="form-group">
+    <label for="id">id</label>
+    <input
+      type="text"
+      class="form-control"
+      id="id"
+      [(ngModel)]="author.id"
+      aria-describedby="idlHelp"
+      placeholder="enter the value of id"
+    />
+    <small id="idHelp" class="form-text text-muted"
+      >Enter the value of id</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="name">author name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      [(ngModel)]="author.name"
+      aria-describedby="namelHelp"
+      placeholder="enter the value of name"
+    />
+    <small id="nameHelp" class="form-text text-muted"
+      >Enter the value of name</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="biography">biography</label>
+    <input
+      type="text"
+      class="form-control"
+      id="biography"
+      [(ngModel)]="author.biography"
+      aria-describedby="biographylHelp"
+      placeholder="enter the value of author"
+    />
+    <small id="authorHelp" class="form-text text-muted"
+      >Enter the biography of author</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="dateofbirth">dateofbirth</label>
+    <input
+      type="date"
+      class="form-control"
+      id="dateofbirth"
+      [(ngModel)]="author.dateofbirth"
+      aria-describedby="dateofbirthlHelp"
+      placeholder="enter the value of dateofbirth"
+    />
+    <small id="dateofbirthHelp" class="form-text text-muted"
+      >Enter the value of dateofbirth</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="email">email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="{{ author.email }}"
+      [(ngModel)]="author.email"
+      aria-describedby="emaillHelp"
+      placeholder="enter the value of email"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >enter the author email {{ author.email }}
+    </small>
+  </div>
+
+  <div class="form-group">
+    <label for="listofbooks">listofbooks</label>
+    <input
+      type="text"
+      class="form-control"
+      id="listofbooks"
+      [(ngModel)]="author.listofbooks"
+      aria-describedby="listofbookslHelp"
+      placeholder="enter the value of listofbooks"
+    />
+    <small id="listofbooksHelp" class="form-text text-muted"
+      >Enter the value of listofbooks</small
+    >
+  </div>
+
+  <button class="btn btn-primary btn-lg" (click)="onAddauthor()">
+    Add author
+  </button>
+
+  <ul class="error">
+    <li *ngFor="let error of errors" class="text-danger">{{ error }}</li>
+  </ul>
+</div>

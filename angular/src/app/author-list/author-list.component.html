@@ -1,0 +1,31 @@
+<h1 class="page-title">authors</h1>
+Covers
+
+<table class="table table-hover table-bordered">
+  <thead highlight-class="table-header">
+    <tr class="success">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Biography</th>
+      <th>DateofBirth</th>
+      <th>Email</th>
+      <th>LitofBooks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let author of authors"
+      [routerLink]="['/author/details', author.id]"
+    >
+      <td>{{ author.id }}</td>
+      <td>{{ author.name | uppercase }}</td>
+      <td>{{ author.biography | lowercase }}</td>
+      <td>{{ author.dateofbirth }}</td>
+      <td>{{ author.email }}</td>
+      <td>{{ author.listofbooks}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p class="tags">Total authors: {{ authors.length }}</p>
